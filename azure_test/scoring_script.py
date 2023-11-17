@@ -8,7 +8,7 @@ from azureml.core.model import Model
 def init():
     global model
     # Retrieve the path to the model file using the model name
-    model_path = Model.get_model_path(model_name="test")
+    model_path = Model.get_model_path(model_name="test", version=1)
     # Load the model
     model = joblib.load(model_path)
 
