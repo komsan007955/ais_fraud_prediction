@@ -31,4 +31,4 @@ def run(raw_data):
         return json.dumps({"error": error})
 
 def preprocess(data):
-    return np.delete(data, 2)
+    return np.delete(data, [2, 3])
