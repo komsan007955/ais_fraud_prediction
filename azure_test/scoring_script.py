@@ -20,7 +20,7 @@ def run(raw_data):
         data = np.array(data)
 	
         # Get the data preprocessed
-        data_prep = preprocess(data)
+        data_prep = preprocess(data).reshape(1, -1)
         
         # Make predictions
         result = model.predict(data_prep)
@@ -32,4 +32,4 @@ def run(raw_data):
         return json.dumps({"error": error})
 
 def preprocess(data):
-    return np.delete(data, [2, 3])
+    return np.vectorize(np.float32)(np.delete(data, [2, 3]))
