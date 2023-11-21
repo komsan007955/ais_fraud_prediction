@@ -1,5 +1,6 @@
 # scoring_script.py
 
+import os
 import json
 import joblib
 import numpy as np
@@ -8,7 +9,7 @@ from azureml.core.model import Model
 def init():
     global model
     # Retrieve the path to the model file using the model name
-    model_path = Model.get_model_path(model_name="test", version=1)
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), './model.pkl')
     # Load the model
     model = joblib.load(model_path)
 

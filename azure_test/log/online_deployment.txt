@@ -2,45 +2,46 @@ Instance status:
 SystemSetup: Succeeded
 UserContainerImagePull: Succeeded
 ModelDownload: Succeeded
-UserContainerStart: InProgress
+UserContainerStart: Succeeded
 
 Container events:
-Kind: Pod, Name: Downloading, Type: Normal, Time: 2023-11-17T08:17:14.24196Z, Message: Start downloading models
-Kind: Pod, Name: Pulling, Type: Normal, Time: 2023-11-17T08:17:18.836322Z, Message: Start pulling container image
-Kind: Pod, Name: Pulled, Type: Normal, Time: 2023-11-17T08:18:29.28428Z, Message: Container image is pulled successfully
-Kind: Pod, Name: Downloaded, Type: Normal, Time: 2023-11-17T08:18:29.28428Z, Message: Models are downloaded successfully
-Kind: Pod, Name: Created, Type: Normal, Time: 2023-11-17T08:18:29.331451Z, Message: Created container inference-server
-Kind: Pod, Name: Started, Type: Normal, Time: 2023-11-17T08:18:29.39775Z, Message: Started container inference-server
+Kind: Pod, Name: Downloading, Type: Normal, Time: 2023-11-21T04:32:56.450408Z, Message: Start downloading models
+Kind: Pod, Name: Pulling, Type: Normal, Time: 2023-11-21T04:33:01.592509Z, Message: Start pulling container image
+Kind: Pod, Name: Pulled, Type: Normal, Time: 2023-11-21T04:34:05.73131Z, Message: Container image is pulled successfully
+Kind: Pod, Name: Downloaded, Type: Normal, Time: 2023-11-21T04:34:05.73131Z, Message: Models are downloaded successfully
+Kind: Pod, Name: Created, Type: Normal, Time: 2023-11-21T04:34:05.764732Z, Message: Created container inference-server
+Kind: Pod, Name: Started, Type: Normal, Time: 2023-11-21T04:34:05.824202Z, Message: Started container inference-server
+Kind: Pod, Name: ContainerReady, Type: Normal, Time: 2023-11-21T04:34:25.197426164Z, Message: Container is ready
 
 Container logs:
 /bin/bash: /azureml-envs/sklearn-1.1/lib/libtinfo.so.6: no version information available (required by /bin/bash)
 /bin/bash: /azureml-envs/sklearn-1.1/lib/libtinfo.so.6: no version information available (required by /bin/bash)
 /bin/bash: /azureml-envs/sklearn-1.1/lib/libtinfo.so.6: no version information available (required by /bin/bash)
-2023-11-17T08:18:29,399720774+00:00 - rsyslog/run 
+2023-11-21T04:34:05,824698158+00:00 - rsyslog/run 
 bash: /azureml-envs/sklearn-1.1/lib/libtinfo.so.6: no version information available (required by bash)
-2023-11-17T08:18:29,407686369+00:00 - gunicorn/run 
-2023-11-17T08:18:29,410017455+00:00 | gunicorn/run | 
-2023-11-17T08:18:29,411873224+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:29,413267575+00:00 | gunicorn/run | AzureML Container Runtime Information
-2023-11-17T08:18:29,414561423+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:29,415940874+00:00 | gunicorn/run | 
-2023-11-17T08:18:29,415998876+00:00 - nginx/run 
-2023-11-17T08:18:30,035907514+00:00 | gunicorn/run | 
-2023-11-17T08:18:30,038518410+00:00 | gunicorn/run | AzureML image information: openmpi4.1.0-ubuntu20.04, Materializaton Build:20231030.v1
-2023-11-17T08:18:30,039958863+00:00 | gunicorn/run | 
-2023-11-17T08:18:30,041308713+00:00 | gunicorn/run | 
-2023-11-17T08:18:30,042640162+00:00 | gunicorn/run | PATH environment variable: /azureml-envs/sklearn-1.1/bin:/opt/miniconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-2023-11-17T08:18:30,044124217+00:00 | gunicorn/run | PYTHONPATH environment variable: 
-2023-11-17T08:18:30,045510768+00:00 | gunicorn/run | 
-2023-11-17T08:18:30,308120056+00:00 | gunicorn/run | CONDAPATH environment variable: /opt/miniconda
+2023-11-21T04:34:05,829284566+00:00 - nginx/run 
+2023-11-21T04:34:05,839794486+00:00 - gunicorn/run 
+2023-11-21T04:34:05,841799090+00:00 | gunicorn/run | 
+2023-11-21T04:34:05,843532093+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:05,845166396+00:00 | gunicorn/run | AzureML Container Runtime Information
+2023-11-21T04:34:05,851689808+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:05,858952822+00:00 | gunicorn/run | 
+2023-11-21T04:34:06,379892404+00:00 | gunicorn/run | 
+2023-11-21T04:34:06,382168910+00:00 | gunicorn/run | AzureML image information: openmpi4.1.0-ubuntu20.04, Materializaton Build:20231030.v1
+2023-11-21T04:34:06,383275614+00:00 | gunicorn/run | 
+2023-11-21T04:34:06,384570917+00:00 | gunicorn/run | 
+2023-11-21T04:34:06,385772021+00:00 | gunicorn/run | PATH environment variable: /azureml-envs/sklearn-1.1/bin:/opt/miniconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2023-11-21T04:34:06,387036824+00:00 | gunicorn/run | PYTHONPATH environment variable: 
+2023-11-21T04:34:06,388489929+00:00 | gunicorn/run | 
+2023-11-21T04:34:06,638066552+00:00 | gunicorn/run | CONDAPATH environment variable: /opt/miniconda
 
 # conda environments:
 #
                       *  /azureml-envs/sklearn-1.1
 base                     /opt/miniconda
 
-2023-11-17T08:18:30,891972295+00:00 | gunicorn/run | 
-2023-11-17T08:18:30,897611803+00:00 | gunicorn/run | Pip Dependencies (before dynamic installation)
+2023-11-21T04:34:07,121483352+00:00 | gunicorn/run | 
+2023-11-21T04:34:07,122820756+00:00 | gunicorn/run | Pip Dependencies (before dynamic installation)
 
 absl-py==2.0.0
 adal==1.2.7
@@ -214,37 +215,37 @@ Werkzeug==3.0.1
 wrapt==1.12.1
 zipp==3.17.0
 
-2023-11-17T08:18:31,398379578+00:00 | gunicorn/run | 
-2023-11-17T08:18:31,399860132+00:00 | gunicorn/run | Entry script directory: /var/azureml-app/231117151323-4046234838/.
-2023-11-17T08:18:31,401407889+00:00 | gunicorn/run | 
-2023-11-17T08:18:31,403062250+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:31,404713911+00:00 | gunicorn/run | Dynamic Python Package Installation
-2023-11-17T08:18:31,407252405+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:31,409139675+00:00 | gunicorn/run | 
-2023-11-17T08:18:31,410958842+00:00 | gunicorn/run | Dynamic Python package installation is disabled.
-2023-11-17T08:18:31,412376994+00:00 | gunicorn/run | 
-2023-11-17T08:18:31,413713143+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:31,415145896+00:00 | gunicorn/run | Checking if the Python package azureml-inference-server-http is installed
-2023-11-17T08:18:31,416524147+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:31,417936999+00:00 | gunicorn/run | 
-2023-11-17T08:18:32,355569890+00:00 | gunicorn/run | 
-2023-11-17T08:18:32,357197650+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:32,358496798+00:00 | gunicorn/run | AzureML Inference Server
-2023-11-17T08:18:32,359870749+00:00 | gunicorn/run | ###############################################
-2023-11-17T08:18:32,361174397+00:00 | gunicorn/run | 
-2023-11-17T08:18:32,362813057+00:00 | gunicorn/run | Starting AzureML Inference Server HTTP.
-2023-11-17 08:18:32,500 I [12] azmlinfsrv - Loaded logging config from /azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml_inference_server_http/logging.json
-2023-11-17 08:18:32,574 I [12] gunicorn.error - Starting gunicorn 20.1.0
-2023-11-17 08:18:32,575 I [12] gunicorn.error - Listening at: http://0.0.0.0:31311 (12)
-2023-11-17 08:18:32,575 I [12] gunicorn.error - Using worker: sync
-2023-11-17 08:18:32,576 I [78] gunicorn.error - Booting worker with pid: 78
+2023-11-21T04:34:07,546405883+00:00 | gunicorn/run | 
+2023-11-21T04:34:07,547616087+00:00 | gunicorn/run | Entry script directory: /var/azureml-app/231121112743-475883335/.
+2023-11-21T04:34:07,548760890+00:00 | gunicorn/run | 
+2023-11-21T04:34:07,550025194+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:07,551331898+00:00 | gunicorn/run | Dynamic Python Package Installation
+2023-11-21T04:34:07,552647701+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:07,553980705+00:00 | gunicorn/run | 
+2023-11-21T04:34:07,555462209+00:00 | gunicorn/run | Dynamic Python package installation is disabled.
+2023-11-21T04:34:07,556580913+00:00 | gunicorn/run | 
+2023-11-21T04:34:07,557994317+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:07,559169220+00:00 | gunicorn/run | Checking if the Python package azureml-inference-server-http is installed
+2023-11-21T04:34:07,560395424+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:07,561744428+00:00 | gunicorn/run | 
+2023-11-21T04:34:08,388700723+00:00 | gunicorn/run | 
+2023-11-21T04:34:08,390109527+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:08,391334031+00:00 | gunicorn/run | AzureML Inference Server
+2023-11-21T04:34:08,392502134+00:00 | gunicorn/run | ###############################################
+2023-11-21T04:34:08,393675838+00:00 | gunicorn/run | 
+2023-11-21T04:34:08,395043642+00:00 | gunicorn/run | Starting AzureML Inference Server HTTP.
+2023-11-21 04:34:08,525 I [12] azmlinfsrv - Loaded logging config from /azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml_inference_server_http/logging.json
+2023-11-21 04:34:08,600 I [12] gunicorn.error - Starting gunicorn 20.1.0
+2023-11-21 04:34:08,600 I [12] gunicorn.error - Listening at: http://0.0.0.0:31311 (12)
+2023-11-21 04:34:08,601 I [12] gunicorn.error - Using worker: sync
+2023-11-21 04:34:08,602 I [78] gunicorn.error - Booting worker with pid: 78
 
 Azure ML Inferencing HTTP server v0.8.4.2
 
 
 Server Settings
 ---------------
-Entry Script Name: /var/azureml-app/231117151323-4046234838/scoring_script.py
+Entry Script Name: /var/azureml-app/231121112743-475883335/scoring_script.py
 Model Directory: /var/azureml-app/azureml-models/test/1
 Config File: None
 Worker Count: 1
@@ -263,92 +264,39 @@ Server Routes
 Liveness Probe: GET   127.0.0.1:31311/
 Score:          POST  127.0.0.1:31311/score
 
-2023-11-17 08:18:32,822 I [78] azmlinfsrv - AML_FLASK_ONE_COMPATIBILITY is set. Patched Flask to ensure compatibility with Flask 1.
+2023-11-21 04:34:08,814 I [78] azmlinfsrv - AML_FLASK_ONE_COMPATIBILITY is set. Patched Flask to ensure compatibility with Flask 1.
 Initializing logger
-2023-11-17 08:18:32,824 I [78] azmlinfsrv - Starting up app insights client
-2023-11-17 08:18:33,383 I [78] azmlinfsrv.user_script - Found user script at /var/azureml-app/231117151323-4046234838/scoring_script.py
-2023-11-17 08:18:33,383 I [78] azmlinfsrv.user_script - run() is not decorated. Server will invoke it with the input in JSON string.
-2023-11-17 08:18:33,383 I [78] azmlinfsrv.user_script - Invoking user's init function
-ERROR:azureml.core.model:Model test not found in cache at /var/azureml-app/231117151323-4046234838/azureml-models or in current working directory /var/azureml-app/231117151323-4046234838. For more info, set logging level to DEBUG.
-
-2023-11-17 08:18:33,383 E [78] azmlinfsrv - User's init function failed
-2023-11-17 08:18:33,384 E [78] azmlinfsrv - Encountered Exception Traceback (most recent call last):
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml/core/model.py", line 796, in get_model_path
-    return Model._get_model_path_local(model_name, version)
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml/core/model.py", line 828, in _get_model_path_local
-    return Model._get_model_path_local_from_root(model_name)
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml/core/model.py", line 870, in _get_model_path_local_from_root
-    raise ModelNotFoundException("Model {} not found in cache at {} or in current working directory {}. "
-azureml.exceptions._azureml_exception.ModelNotFoundException: ModelNotFoundException:
-	Message: Model test not found in cache at /var/azureml-app/231117151323-4046234838/azureml-models or in current working directory /var/azureml-app/231117151323-4046234838. For more info, set logging level to DEBUG.
-	InnerException None
-	ErrorResponse 
-{
-    "error": {
-        "message": "Model test not found in cache at /var/azureml-app/231117151323-4046234838/azureml-models or in current working directory /var/azureml-app/231117151323-4046234838. For more info, set logging level to DEBUG."
-    }
-}
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml_inference_server_http/server/user_script.py", line 119, in invoke_init
-    self._user_init()
-  File "/var/azureml-app/231117151323-4046234838/scoring_script.py", line 11, in init
-    model_path = Model.get_model_path(model_name="test", version=1)
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml/core/model.py", line 802, in get_model_path
-    raise WebserviceException(ee.message, logger=module_logger)
-azureml.exceptions._azureml_exception.WebserviceException: WebserviceException:
-	Message: Model test not found in cache at /var/azureml-app/231117151323-4046234838/azureml-models or in current working directory /var/azureml-app/231117151323-4046234838. For more info, set logging level to DEBUG.
-	InnerException None
-	ErrorResponse 
-{
-    "error": {
-        "message": "Model test not found in cache at /var/azureml-app/231117151323-4046234838/azureml-models or in current working directory /var/azureml-app/231117151323-4046234838. For more info, set logging level to DEBUG."
-    }
-}
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml_inference_server_http/server/aml_blueprint.py", line 109, in setup
-    self.user_script.invoke_init()
-  File "/azureml-envs/sklearn-1.1/lib/python3.8/site-packages/azureml_inference_server_http/server/user_script.py", line 121, in invoke_init
-    raise UserScriptException(ex) from ex
-azureml_inference_server_http.server.user_script.UserScriptException: Caught an unhandled exception from the user script
-
-2023-11-17 08:18:33,384 I [78] azmlinfsrv - Model Directory Contents:
-2023-11-17 08:18:33,384 I [78] azmlinfsrv - 1/
-2023-11-17 08:18:33,384 I [78] azmlinfsrv -     model.pkl
-2023-11-17 08:18:33,385 I [78] gunicorn.error - Worker exiting (pid: 78)
-
-Azure ML Inferencing HTTP server v0.8.4.2
-
-
-Server Settings
----------------
-Entry Script Name: /var/azureml-app/231117151323-4046234838/scoring_script.py
-Model Directory: /var/azureml-app/azureml-models/test/1
-Config File: None
-Worker Count: 1
-Worker Timeout (seconds): 300
-Server Port: 31311
-Health Port: 31311
-Application Insights Enabled: false
-Application Insights Key: None
-Inferencing HTTP server version: azmlinfsrv/0.8.4.2
-CORS for the specified origins: None
-Create dedicated endpoint for health: None
-
-
-Server Routes
----------------
-Liveness Probe: GET   127.0.0.1:31311/
-Score:          POST  127.0.0.1:31311/score
-
-2023-11-17 08:18:33,572 I [12] gunicorn.error - Shutting down: Master
-2023-11-17 08:18:33,573 I [12] gunicorn.error - Reason: Worker failed to boot.
-/bin/bash: /azureml-envs/sklearn-1.1/lib/libtinfo.so.6: no version information available (required by /bin/bash)
-2023-11-17T08:18:33,609249840+00:00 - gunicorn/finish 3 0
-2023-11-17T08:18:33,610427084+00:00 - Exit code 3 is not normal. Killing image.
+2023-11-21 04:34:08,815 I [78] azmlinfsrv - Starting up app insights client
+2023-11-21 04:34:09,288 I [78] azmlinfsrv.user_script - Found user script at /var/azureml-app/231121112743-475883335/scoring_script.py
+2023-11-21 04:34:09,288 I [78] azmlinfsrv.user_script - run() is not decorated. Server will invoke it with the input in JSON string.
+2023-11-21 04:34:09,288 I [78] azmlinfsrv.user_script - Invoking user's init function
+2023-11-21 04:34:09,567 I [78] azmlinfsrv.user_script - Users's init has completed successfully
+2023-11-21 04:34:09,567 I [78] azmlinfsrv.swagger - Swaggers are prepared for the following versions: [2, 3, 3.1].
+2023-11-21 04:34:09,567 I [78] azmlinfsrv - Scoring timeout is set to 3600000
+2023-11-21 04:34:09,567 I [78] azmlinfsrv - Worker with pid 78 ready for serving traffic
+2023-11-21 04:34:20,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:20 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:22,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:22 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:30,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:30 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:32,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:32 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:40,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:40 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:42,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:42 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:50,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:50 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:34:52,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:34:52 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:00,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:00 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:02,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:02 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:10,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:10 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:12,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:12 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:20,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:20 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:22,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:22 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:30,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:30 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:32,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:32 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:40,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:40 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:42,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:42 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:50,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:50 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:35:52,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:35:52 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:36:00,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:36:00 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:36:02,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:36:02 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:36:10,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:36:10 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:36:12,143 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:36:12 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
+2023-11-21 04:36:20,254 I [78] gunicorn.access - 127.0.0.1 - - [21/Nov/2023:04:36:20 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.18"
 
