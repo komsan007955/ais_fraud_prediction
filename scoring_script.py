@@ -50,12 +50,7 @@ def preprocess(df):
 
 def run(raw_data):
     try:
-        data = np.array([json.loads(raw_data)["data"]])
-
-        df = pd.DataFrame(data, columns=[
-            'address', 'contact_phone', 'credit_card_no', 'customer_name', 'email',
-            'id_card_no', 'date_of_birth', 'member_since', 'sex', 'status'
-        ])
+        df = pd.DataFrame([json.loads(raw_data)])
 
         df_trf = preprocess(df)
         result = model.predict(df_trf)

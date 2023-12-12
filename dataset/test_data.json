@@ -1,4 +1,12 @@
-{"data": [
-    "36400 Kimberly Roads\nNew Brittanyside, VT 67887", "2045258726", "7073005077", "Carlos Hawkins", 
-    "alicia05@example.org", "5132906866313", "1965-9-1", "2012-12-18", "male", "divorced"
-]}
+{
+    "address":"9084 Destiny Drives Apt. 873 Cooperton, DC 75097",
+    "contact_phone":"0931410005",
+    "credit_card_no":"6982000070",
+    "customer_name":"Apisit Chaiyachard",
+    "email":"5555@example.com",
+    "id_card_no":"11027005343335555",
+    "date_of_birth":"1995-11-14",
+    "member_since":"2021-08-03",
+    "sex":"male",
+    "status":"single"
+ }
