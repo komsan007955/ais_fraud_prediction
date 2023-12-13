@@ -15,22 +15,30 @@ allowSelfSignedHttps(True) # this line is needed if you use self-signed certific
 # depending on the format your endpoint expects.
 # More information can be found here:
 # https://docs.microsoft.com/azure/machine-learning/how-to-deploy-advanced-entry-script
-data = {"data": [
-    "36400 Kimberly Roads\nNew Brittanyside, VT 67887", "2045258726", "7073005077", "Carlos Hawkins", 
-    "alicia05@example.org", "5132906866313", "1965-9-1", "2012-12-18", "male", "divorced"
-]}
+data = {
+    "address": "9084 Destiny Drives Apt. 873 Cooperton, DC 75097",
+    "contact_phone": "0931410005",
+    "credit_card_no": "6982000070",
+    "customer_name": "Apisit Chaiyachard",
+    "email": "5555@example.com",
+    "id_card_no": "11027005343335555",
+    "date_of_birth": "1995-11-14",
+    "member_since": "2021-08-03",
+    "sex": "male",
+    "status": "single"
+ }
 
 body = str.encode(json.dumps(data))
 
-url = 'https://fraud-pred-demo-1.southeastasia.inference.ml.azure.com/score'
+url = 'https://fraud-prediction.eastus2.inference.ml.azure.com/score'
 # Replace this with the primary/secondary key or AMLToken for the endpoint
-api_key = 'ld6CKelsCMH9PdfHzBfe24zbCQesZgOb'
+api_key = 'qH9VQupVmqZf28PlDVB2cb0FxApCHDlf'
 if not api_key:
     raise Exception("A key should be provided to invoke the endpoint")
 
 # The azureml-model-deployment header will force the request to go to a specific deployment.
 # Remove this header to have the request observe the endpoint traffic rules
-headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key), 'azureml-model-deployment': 'fraud-pred-2-1' }
+headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key), 'azureml-model-deployment': 'fraud-prediction-1' }
 
 req = urllib.request.Request(url, body, headers)
 
