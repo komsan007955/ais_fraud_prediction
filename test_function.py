@@ -2,7 +2,7 @@ import requests
 
 def test_azure_function():
     #url = "https://fraudpremium1.azurewebsites.net/api/http_trigger"
-    url = "http://localhost:7071/api/Trigger101"
+    url = "http://localhost:7071/api/predict-ml"
     # headers = {
     #     'x-functions-key': 'bHFGAY9SG-6A-fJ1FaQVLTKdpNMXYsT5RuODCqEALtWBAzFuC3bZQw==',  # If needed
     #     'Content-Type': 'application/json'
