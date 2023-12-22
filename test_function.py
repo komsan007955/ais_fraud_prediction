@@ -1,29 +1,22 @@
 import requests
 
-def test_azure_function():
-    #url = "https://fraudpremium1.azurewebsites.net/api/http_trigger"
-    url = "http://localhost:7071/api/predict-ml"
-    # headers = {
-    #     'x-functions-key': 'bHFGAY9SG-6A-fJ1FaQVLTKdpNMXYsT5RuODCqEALtWBAzFuC3bZQw==',  # If needed
-    #     'Content-Type': 'application/json'
-    # }
+url = "https://ais-fraud-prediction.azurewebsites.net/api/predict_ml?code=YmzMTvc1Djd0oOFjSfBVvUpZYIlSlI9yVpksfLVcbWAOAzFujJNQ_g%3D%3D"
+data = {
+    "address":"9084 Destiny Drives Apt. 873 Cooperton, DC 75097",
+    "contact_phone":"0931410005",
+    "credit_card_no":"6982000070",
+    "customer_name":"Apisit Chaiyachard",
+    "email":"5555@example.com",
+    "id_card_no":"11027005343335555",
+    "date_of_birth":"1995-11-14",
+    "member_since":"2021-08-03",
+    "sex":"male",
+    "status":"single"
+}
 
-    headers = {
-        'Content-Type': 'application/json'
-    }
-    data = {
-        'name': '0662485036'
-    }
+response = requests.post(url, json=data)
 
-    response = requests.post(url, json=data, headers=headers)
-     
-     # ... your code to get the response ...
-    if response.text:
-        print(response.text)
-    else:
-        print("Empty response body")
-    assert response.status_code == 200
-
-
-# Run the test
-test_azure_function()
+if response.text:
+    print(response.text)
+else:
+    print("Empty response body")
